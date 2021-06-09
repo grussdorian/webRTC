@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broadcast</title>
+    <style>
+  div {
+    width: 500px;
+    height: 500px;
+    margin: 10px 50px 10px 10px;
+    background: #fff7e0;
+    border: 2px groove;
+    float: right;
+  }
+  p {
+    margin: 0;
+    margin-left: 10px;
+    color: red;
+    width: 220px;
+    height: 120px;
+    padding-top: 70px;
+    float: left;
+    font-size: 14px;
+  }
+  span {
+    display: block;
+  }
+  </style>
+    {{>scripts}}
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script defer src="../js/broadcast.js"></script>
+</head>
+<body>
+    {{>header}}
+    <input id="message-box" placeholder="send message">
+    <button id="send">Send</button>
+    <ul id="messages"></ul>
+    
+    <p>
+    <span>Move the mouse over the div.</span>
+    <span>&nbsp;</span>
+    </p>
+    <div class="canvas">
+    <canvas id="art" tabindex="0" width="500" height="500" style="width: 500px; height: 500px;"></canvas>
+    </div> 
+</body>
+{{>footer}}
+</html>
